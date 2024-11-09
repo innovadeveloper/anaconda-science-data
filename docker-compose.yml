@@ -7,7 +7,7 @@ services:
     environment:
       - JUPYTER_ENABLE_LAB=yes  # Activa JupyterLab al iniciar el contenedor
     volumes:
-      - .:/home/work  # Monta el directorio actual en /home/jovyan/work en el contenedor
+      - /mnt/sdc2/docker_volumes/anaconda_science_data_volume:/home/work  # Monta el directorio actual en /home/jovyan/work en el contenedor
     ports:
       - "8888:8888"  # Expone el puerto 8888 para acceder a JupyterLab
     command: >
